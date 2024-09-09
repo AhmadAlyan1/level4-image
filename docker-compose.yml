@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  test:
+    image: your-new-image-name:latest
+    container_name: test_container
+    ports:
+      - "5000:5000"  # Adjust this as needed based on the exposed ports of your application
+    environment:
+      - ENV_VAR_NAME=value  # Add any environment variables required by your application
+    volumes:
+      - .:/app  # Mounts the current directory to /app in the container, if needed
